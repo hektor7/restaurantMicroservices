@@ -1,0 +1,11 @@
+server:
+  port: ${vcap.application.port:8761}   # HTTP port
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+  server:
+    waitTimeInMsWhenSyncEmpty: 0
