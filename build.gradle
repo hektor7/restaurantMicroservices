@@ -1,7 +1,30 @@
 subprojects {
     apply plugin: 'java'
+    apply plugin: 'application'
 
     repositories {
         mavenCentral()
     }
+
+    /*task runAll {
+        dependsOn 'runRestaurantService'
+
+    }
+
+    task runRestaurantService {
+        dependsOn ':restaurant-service:bootRun'
+    }
+
+    task runEurekaService {
+        dependsOn ':eureka-service:bootRun'
+    }
+
+    runRestaurantService.mustRunAfter runEurekaService
+    */
+
+    /*task debug (dependsOn: 'bootRun') {
+        applicationDefaultJvmArgs = [
+                "-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5005"
+        ]
+    }*/
 }

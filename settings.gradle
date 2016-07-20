@@ -1,2 +1,1 @@
-include 'restaurant-service'
-include 'eureka-service'
+include 'restaurant-service', 'eureka-service'

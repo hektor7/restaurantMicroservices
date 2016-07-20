@@ -28,6 +28,13 @@ public class Restaurant implements Serializable{
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Table> tables = new ArrayList<>();
 
+    public Restaurant() {}
+
+    public Restaurant(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
     public Long getId() {
         return id;
     }

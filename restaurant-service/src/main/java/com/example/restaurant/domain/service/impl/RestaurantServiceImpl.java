@@ -18,6 +18,14 @@ public class RestaurantServiceImpl implements RestaurantService {
     @Autowired
     RestaurantRepository restaurantRepository;
 
+    public RestaurantServiceImpl() {
+    }
+
+    public RestaurantServiceImpl(RestaurantRepository restaurantRepository) {
+        this.restaurantRepository = restaurantRepository;
+    }
+
+
     @Override
     public Iterable<Restaurant> getAllRestaurants() {
         return this.restaurantRepository.findAll();

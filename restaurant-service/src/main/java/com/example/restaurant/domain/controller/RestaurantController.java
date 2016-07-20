@@ -27,6 +27,13 @@ public class RestaurantController {
     @Autowired
     protected RestaurantService restaurantService;
 
+    public RestaurantController() {
+    }
+
+    public RestaurantController(RestaurantService restaurantService) {
+        this.restaurantService = restaurantService;
+    }
+
     /**
      * Fetch restaurants with the specified name. A partial case-insensitive
      * match is supported. So <code>http://.../restaurants/rest</code> will find
