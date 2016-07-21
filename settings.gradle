@@ -1,1 +1,3 @@
 include 'restaurant-service', 'eureka-service'
+include 'user-service'
+
